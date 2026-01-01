@@ -1,0 +1,98 @@
+@layer theme {
+  :root {
+    --font-size: 16px;
+    --background: #FAFAFA;
+    --foreground: #1F2937;
+    --card: #FFFFFF;
+    --card-foreground: #1F2937;
+    --popover: #FFFFFF;
+    --popover-foreground: #1F2937;
+    --primary: #1A5F3C;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F5F1E8;
+    --secondary-foreground: #1F2937;
+    --muted: #F9FAFB;
+    --muted-foreground: #6B7280;
+    --accent: #B8860B;
+    --accent-foreground: #FFFFFF;
+    --destructive: #DC2626;
+    --destructive-foreground: #FFFFFF;
+    --border: #E5E7EB;
+    --input: transparent;
+    --input-background: #F3F4F6;
+    --switch-background: #D1D5DB;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --ring: #1A5F3C;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: var(--font-size);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
+
+  @media (max-width: 768px) {
+    .animate-marquee {
+      animation: marquee 7s linear infinite;
+    }
+  }
+}
